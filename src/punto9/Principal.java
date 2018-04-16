@@ -19,7 +19,6 @@ public class Principal {
         inventario.agregarLibro(l2);
         inventario.agregarLibro(l3);
         
-        //inventario.mostrarLibro();
         System.out.println("Libros cargados...");
         System.out.println("------");
         System.out.println("Ingrese un titulo para buscar"); 
