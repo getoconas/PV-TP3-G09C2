@@ -6,10 +6,10 @@ public class Punto {
     private int x;
     private int y;
     
-    public Punto() {
+    public Punto(){
         
     }
-    
+
     public Punto(int x, int y) {
         this.x = x;
         this.y = y;
@@ -31,7 +31,11 @@ public class Punto {
         this.y = y;
     }
     
-    public double calcularDistanciaEntrePuntos(Punto otroPunto) {
-        return Math.sqrt(Math.pow(otroPunto.getX() - otroPunto.getY(), 2) + Math.pow(otroPunto.getX() - otroPunto.getY(), 2));
+    
+    public double calcularDistanciaEntrePuntos(Punto otroPunto){
+    
+     return Math.sqrt(Math.pow(otroPunto.getX()-x, 2) + Math.pow(otroPunto.getY()-y, 2));
     }
+    
+    
 }
