@@ -15,5 +15,11 @@ public class Principal {
             contador++;
         }
         arreglo.mostrarElementosDelArreglo();
+        System.out.println("");
+        arreglo.mostrarMayor();
+        System.out.println("");
+        arreglo.mostrarMenor();
+        System.out.println("");
+        arreglo.mostrarPromedio();
     }   
 }
