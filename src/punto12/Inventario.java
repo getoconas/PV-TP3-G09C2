@@ -45,6 +45,7 @@ public class Inventario {
         }
         if (encontrado == false) {
             System.out.println("No se encontro ningun libro con la categoria y/o titulo ingresado");
+            System.out.println("");
         }
     }
         
@@ -65,6 +66,7 @@ public class Inventario {
         }
         if (encontrado == false) {
             System.out.println("No se encontro ningun libro con el autor ingresado");
+            System.out.println("");
         }
     }
 }

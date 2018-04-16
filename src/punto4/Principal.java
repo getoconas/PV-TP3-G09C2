@@ -9,8 +9,9 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
         ArregloNumero arreglo = new ArregloNumero();
         int contador = 0;
+        System.out.println("Ingrese 10 números");
         while(contador < 10) {
-            System.out.println("Ingrese un número: ");
+            System.out.println("Ingrese número: ");
             arreglo.getNumeros()[contador] = scanner.nextInt();
             contador++;
         }

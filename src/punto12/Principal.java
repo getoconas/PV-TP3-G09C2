@@ -27,26 +27,32 @@ public class Principal {
             
             switch (opcion) {
                 case 1:
-                    Libro l1 = new Libro("150-001", "El manual del guerrero de la luz", "Pablo Coelho", 250.00, "Novela");
-                    Libro l2 = new Libro("200-006", "La ciudad de las biestas", "Isabel Allende", 280.00, "Novela");
-                    Libro l3 = new Libro("300-055", "Cien años de soledad", "Gabriel García Márquez", 350.00, "Novela");
-                    Libro l4 = new Libro("100-454", "El diario de Ana Frank", "Anne Frank", 250.00, "Novela");
-                    Libro l5 = new Libro("200-780", "La metamorfosis", "Franz Kafka", 340.00, "Novela");
-                    Libro l6 = new Libro("500-330", "El nombre de la rosa", "Umberto Eco", 280.00, "Novela");
-                    Libro l7 = new Libro("702-000", "Rayuela", "Julio Cortazar", 300.00, "Novela");
-                    
-                    inventario.agregarLibro(l1);
-                    inventario.agregarLibro(l2);
-                    inventario.agregarLibro(l3);
-                    inventario.agregarLibro(l4);
-                    inventario.agregarLibro(l5);
-                    inventario.agregarLibro(l6);
-                    inventario.agregarLibro(l7);
+                    if (!control) {
+                        Libro l1 = new Libro("150-001", "El manual del guerrero de la luz", "Pablo Coelho", 250.00, "Ficción");
+                        Libro l2 = new Libro("200-006", "La ciudad de las biestas", "Isabel Allende", 280.00, "Aventura");
+                        Libro l3 = new Libro("300-055", "Cien años de soledad", "Gabriel García Márquez", 350.00, "Novela");
+                        Libro l4 = new Libro("100-454", "El diario de Ana Frank", "Anne Frank", 250.00, "Autobiografía");
+                        Libro l5 = new Libro("200-780", "La metamorfosis", "Franz Kafka", 340.00, "Cuento");
+                        Libro l6 = new Libro("500-330", "El nombre de la rosa", "Umberto Eco", 280.00, "Novela");
+                        Libro l7 = new Libro("702-000", "Rayuela", "Julio Cortazar", 300.00, "Antinovela");
 
-                    System.out.println("Libros cargados correctamente...");
-                    System.out.println("");
-                    control = true;
-                    break;
+                        inventario.agregarLibro(l1);
+                        inventario.agregarLibro(l2);
+                        inventario.agregarLibro(l3);
+                        inventario.agregarLibro(l4);
+                        inventario.agregarLibro(l5);
+                        inventario.agregarLibro(l6);
+                        inventario.agregarLibro(l7);
+
+                        System.out.println("Libros cargados correctamente...");
+                        System.out.println("");
+                        control = true;
+                        break;
+                    } else {
+                        System.out.println("Los libros ya fueron cargados...");
+                        System.out.println("");
+                        break;
+                    }
                 case 2:
                     if (control) {
                         System.out.println("");
@@ -89,13 +95,6 @@ public class Principal {
                     System.out.println("Ingrese una opcion correcta...");
                     break;
             }
-            
         }   
-        
-        
-        
-        
-        
-        
     }
 }

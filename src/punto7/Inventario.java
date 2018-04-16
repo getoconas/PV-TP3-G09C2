@@ -28,11 +28,9 @@ public class Inventario {
         
         System.out.println("Ingrese la posicion a modificar");
         int posicion = scanner.nextInt();
-        if (posicion >= autos.length && posicion < 0) {
-            System.out.println("Ingrese una posicion valida...");
-            System.out.println("");
-        } else {
+        if (posicion >= 0 && posicion < autos.length) {
             System.out.println("¿Desea modificar patente? [S/N]");
+            System.out.println("Actual patente: " + autos[posicion].getPatente());
             c = scanner.next().charAt(0);
             scanner.nextLine();
             
@@ -43,6 +41,7 @@ public class Inventario {
             }
             
             System.out.println("¿Desea modificar marca? [S/N]");
+            System.out.println("Actual marca: " + autos[posicion].getMarca());
             c = scanner.next().charAt(0);
             scanner.nextLine();
             
@@ -53,6 +52,7 @@ public class Inventario {
             }
             
             System.out.println("¿Desea modificar modelo? [S/N]");
+            System.out.println("Actual modelo: " + autos[posicion].getModelo());
             c = scanner.next().charAt(0);
             scanner.nextLine();
             
@@ -63,6 +63,7 @@ public class Inventario {
             }
             
             System.out.println("¿Desea modificar color? [S/N]");
+            System.out.println("Actual color: " + autos[posicion].getColor());
             c = scanner.next().charAt(0);
             scanner.nextLine();
             
@@ -73,6 +74,7 @@ public class Inventario {
             }
             
             System.out.println("¿Desea modificar tipo de combustible? [S/N]");
+            System.out.println("Actual tipo de combustible: " + autos[posicion].getCombustible());
             c = scanner.next().charAt(0);
             scanner.nextLine();
             
@@ -81,6 +83,9 @@ public class Inventario {
                 tipo = scanner.nextLine();
                 autos[posicion].setCombustible(tipo);
             }
+        } else {
+            System.out.println("Ingrese una posicion valida...");
+            System.out.println("");
         }
     }
 }
