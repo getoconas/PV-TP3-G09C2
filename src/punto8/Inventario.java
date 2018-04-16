@@ -16,16 +16,11 @@ public class Inventario {
     }
     
     public void mostrarLibro() {
-        System.out.println("*** LIBROS ***");
+        System.out.println("***** Lista de libros ingresados *****");
         for (int i = 0; i < libro.size(); i++) {
             Libro auxiliar = libro.get(i);
-            System.out.println("----------");
-            System.out.println("ISBN: " + auxiliar.getIsbn());
-            System.out.println("Autor: " + auxiliar.getAutor());
-            System.out.println("Titulo: " + auxiliar.getTitulo());
-            System.out.println("Precio: " + auxiliar.getPrecio());
-            System.out.println("----------");
-            System.out.println("");
+            System.out.println("ISBN: " + auxiliar.getIsbn() + " - Autor: " + auxiliar.getAutor() + 
+                    " - Titulo: " + auxiliar.getTitulo() + " - Precio: " + auxiliar.getPrecio());
         }
     }
 }

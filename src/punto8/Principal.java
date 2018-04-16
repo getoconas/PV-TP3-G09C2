@@ -1,19 +1,47 @@
 package punto8;
 
+import java.util.Scanner;
+
 /**/
 
 public class Principal {
     public static void main(String[] args) {
-        Libro l1 = new Libro("150-001", "El Manual Guerrero De La Luz", "Coelho, Pablo", 250.00);
-        Libro l2 = new Libro("200-006", "La Ciudad De Las Biestas", "Allende, Isabel", 280.00);
-        Libro l3 = new Libro("300-055", "Cien Años De Soledad", "García Márquez, Gabriel", 350.00);
-        
+        Scanner scanner = new Scanner(System.in);
         Inventario inventario = new Inventario();
+        String isbn, autor, titulo;
+        double precio;
+        boolean salida = false;
+        char c;
         
-        inventario.agregarLibro(l1);
-        inventario.agregarLibro(l2);
-        inventario.agregarLibro(l3);
-        
+        do {
+            System.out.println("***** INGRESO DE LIBRO *****");
+            System.out.println("Ingrese el ISBN");
+            isbn = scanner.nextLine();
+            System.out.println("Ingrese el autor");
+            autor = scanner.nextLine();
+            System.out.println("Ingrese el titulo");
+            titulo = scanner.nextLine();
+            System.out.println("Ingrese el precio");
+            precio = scanner.nextDouble();
+            
+            Libro ingreso = new Libro(isbn, titulo, autor, precio);
+            inventario.agregarLibro(ingreso);
+            
+            System.out.println("****** Libro ingresado ******");
+            System.out.println("");
+            inventario.mostrarLibro();
+            System.out.println("¿Desea ingresar mas libros? [S/N]");
+            c = scanner.next().charAt(0);
+            
+            scanner.nextLine();
+            
+            if (c == 'S' || c == 's') {
+                salida = true;
+            } else {
+                salida = false;
+            }
+        } while (salida == true);
+                
         inventario.mostrarLibro();
     }
 }
