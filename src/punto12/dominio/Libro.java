@@ -1,7 +1,5 @@
 package punto12.dominio;
 
-import punto12.dominio.Autor;
-
 /**/
 
 public class Libro {

@@ -81,7 +81,7 @@ public class Producto {
     
     //Método para mostrar los numeros de cuotas y la cantidad
     public void mostrarCuotas() {
-        DecimalFormat df = new DecimalFormat("#.00");
+        DecimalFormat df = new DecimalFormat("#.00"); 
         System.out.println("---------------------------------------------------");
         System.out.println("   Información del Producto");
         System.out.println("   Codigo: " + getCodigo() + " - Producto: " + getNombre());
