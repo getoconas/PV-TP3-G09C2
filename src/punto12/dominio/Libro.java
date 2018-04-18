@@ -1,15 +1,17 @@
-package punto12;
+package punto12.dominio;
+
+import punto12.dominio.Autor;
 
 /**/
 
 public class Libro {
     private String isbn;
     private String titulo;
-    private String autor;
+    private Autor autor;
     private double precio;
-    private String categoria;
+    private Categoria categoria;
 
-    public Libro(String isbn, String titulo, String autor, double precio, String categoria) {
+    public Libro(String isbn, String titulo, Autor autor, double precio, Categoria categoria) {
         this.isbn = isbn;
         this.titulo = titulo;
         this.autor = autor;
@@ -33,11 +35,11 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    public String getAutor() {
+    public Autor getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(Autor autor) {
         this.autor = autor;
     }
 
@@ -49,11 +51,11 @@ public class Libro {
         this.precio = precio;
     }
 
-    public String getCategoria() {
+    public Categoria getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
 }

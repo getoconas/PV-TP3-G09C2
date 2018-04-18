@@ -1,18 +1,33 @@
-package punto12;
+package punto12.util;
 
+import punto12.dominio.Libro;
+import punto12.dominio.Autor;
+import punto12.dominio.Categoria;
 import java.util.ArrayList;
 
 /**/
 
 public class Inventario {
     private ArrayList<Libro> libro;
+    private ArrayList<Autor> autor;
+    private ArrayList<Categoria> categoria;
     
     public Inventario() {
         libro = new ArrayList<Libro>();
+        autor = new ArrayList<Autor>();
+        categoria = new ArrayList<Categoria>();
     }
     
     public void agregarLibro(Libro libros) {
         libro.add(libros);
+    }
+    
+    public void agregarAutor(Autor autores) {
+        autor.add(autores);
+    }
+    
+    public void agregarCategoria(Categoria categorias) {
+        categoria.add(categorias);
     }
     
     public void mostrarLibro() {
@@ -20,10 +35,10 @@ public class Inventario {
         for (int i = 0; i < libro.size(); i++) {
             Libro auxiliar = libro.get(i);
             System.out.println("ISBN: " + auxiliar.getIsbn());
-            System.out.println("Autor: " + auxiliar.getAutor());
+            System.out.println("Autor: " + auxiliar.getAutor().getNombre() + " " + auxiliar.getAutor().getApellido());
             System.out.println("Titulo: " + auxiliar.getTitulo());
             System.out.println("Precio: " + auxiliar.getPrecio());
-            System.out.println("Categoria: " + auxiliar.getCategoria());
+            System.out.println("Categoria: " + auxiliar.getCategoria().getTipoCategoria());
             System.out.println("");
         }
     }
@@ -35,10 +50,10 @@ public class Inventario {
             if (libroEncontrado.getCategoria().equals(buscar) || libroEncontrado.getTitulo().equals(buscar)) {
                 System.out.println("");
                 System.out.println("ISBN: " + libroEncontrado.getIsbn());
-                System.out.println("Autor: " + libroEncontrado.getAutor());
+                System.out.println("Autor: " + libroEncontrado.getAutor().getNombre() + " " + libroEncontrado.getAutor().getApellido());
                 System.out.println("Titulo: " + libroEncontrado.getTitulo());
                 System.out.println("Precio: " + libroEncontrado.getPrecio());
-                System.out.println("Categoria: " + libroEncontrado.getCategoria());
+                System.out.println("Categoria: " + libroEncontrado.getCategoria().getTipoCategoria());
                 System.out.println("");
                 encontrado = true;
             }
@@ -56,10 +71,10 @@ public class Inventario {
             if (libroEncontrado.getAutor().equals(autor)) {
                 System.out.println("");
                 System.out.println("ISBN: " + libroEncontrado.getIsbn());
-                System.out.println("Autor: " + libroEncontrado.getAutor());
+                System.out.println("Autor: " + libroEncontrado.getAutor().getNombre() + " " + libroEncontrado.getAutor().getApellido());
                 System.out.println("Titulo: " + libroEncontrado.getTitulo());
                 System.out.println("Precio: " + libroEncontrado.getPrecio());
-                System.out.println("Categoria: " + libroEncontrado.getCategoria());
+                System.out.println("Categoria: " + libroEncontrado.getCategoria().getTipoCategoria());
                 System.out.println("");
                 encontrado = true;
             }
