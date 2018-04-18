@@ -1,4 +1,4 @@
-package punto4;
+package punto4.dominio;
 
 /**/
 
@@ -21,12 +21,14 @@ public class ArregloNumero {
         this.numeros = numeros;
     }
     
+    //Metodo para mostrar los elementos del arreglo
     public void mostrarElementosDelArreglo() {
         for (int i = 0; i < numeros.length; i++) {
             System.out.println("Valor de elemento: " + numeros[i]);
         }
     }
     
+    //Metodo que muestra el mayor numero almacenado en el arreglo
     public void mostrarMayor() {
         int mayor = 0;
         boolean control = true;
@@ -43,6 +45,7 @@ public class ArregloNumero {
         System.out.println("El mayor de los elementos es: " + mayor);
     }
     
+    //Metodo que muestra el menor nymero almacenado en el arreglo
     public void mostrarMenor() {
         int menor = 0;
         boolean control = true;
@@ -59,6 +62,7 @@ public class ArregloNumero {
         System.out.println("El menor de los elementos es: " + menor);
     }
     
+    //Devuelve el promedio de los elementos almacenado en el arreglos
     public void mostrarPromedio() {
         double promedio = 0, sumatoria = 0;
         for (int i = 0; i < numeros.length; i++) {

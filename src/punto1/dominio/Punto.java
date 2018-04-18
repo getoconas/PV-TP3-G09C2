@@ -1,4 +1,4 @@
-package punto1;
+package punto1.dominio;
 
 /**/
 
@@ -31,11 +31,9 @@ public class Punto {
         this.y = y;
     }
     
-    
+    //Metodo para caluclar la distancia entre dos puntos
     public double calcularDistanciaEntrePuntos(Punto otroPunto){
     
      return Math.sqrt(Math.pow(otroPunto.getX()-x, 2) + Math.pow(otroPunto.getY()-y, 2));
     }
-    
-    
 }

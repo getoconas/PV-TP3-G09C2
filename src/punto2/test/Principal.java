@@ -1,24 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package punto2;
+package punto2.test;
 
 import java.util.Scanner;
+import punto2.dominio.Rectangulo;
 
-/**
- *
- * @author FrancoMaximiliano
- */
+/**/
+
 public class Principal {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
-    
         Rectangulo ingresarPunto = new Rectangulo(4,5);
         Rectangulo calculos = new Rectangulo();
         Scanner scanner = new Scanner(System.in);
@@ -34,5 +22,4 @@ public class Principal {
         System.out.println("La superficie del rectangulo es: " + calculos.calcularSuperficie(b, h));
         System.out.println("El perimetro del rectangulo es: " + calculos.calcularPerimetro(b, h));
     }
-    
 }

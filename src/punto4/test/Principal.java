@@ -1,6 +1,7 @@
-package punto4;
+package punto4.test;
 
 import java.util.Scanner;
+import punto4.dominio.ArregloNumero;
 
 /**/
 
