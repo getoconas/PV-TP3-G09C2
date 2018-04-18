@@ -1,5 +1,6 @@
-package punto6;
+package punto6.util;
 
+import punto6.dominio.Rectangulo;
 import java.util.ArrayList;
 
 /**/
@@ -11,10 +12,12 @@ public class Inventario {
         rectangulo = new ArrayList<Rectangulo>();
     }
     
+    //Agrega un rectangulo del tipo Rectangulo al arraylist
     public void agregarRectangulo(Rectangulo rectangulos) {
         rectangulo.add(rectangulos);
     }
     
+    //Muestra una lista de rectangulos cargados en el arraylist
     public void mostrarRectangulo() {
         System.out.println("--- Lista de rectangulos cargados ---");
         for (int i = 0; i < rectangulo.size(); i++) {
@@ -29,6 +32,7 @@ public class Inventario {
         }
     }
     
+    //Elimina un elemento del tipo rectangulo del arraylist
     public void elminarRectangulo(int numero) {
         if (rectangulo.size() != 0) {
             if (numero >= 0 && numero < rectangulo.size()) {

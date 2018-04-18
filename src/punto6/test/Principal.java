@@ -1,6 +1,8 @@
-package punto6;
+package punto6.test;
 
 import java.util.Scanner;
+import punto6.util.Inventario;
+import punto6.dominio.Rectangulo;
 
 /**/
 
