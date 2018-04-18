@@ -6,7 +6,7 @@ import punto5.dominio.Circulo;
 /**/
 
 public class GestorCirculo {
-    private ArrayList<Circulo> listaCirculos=new ArrayList<Circulo>(); //Agregar el new por el NullPointException
+    private ArrayList<Circulo> listaCirculos=new ArrayList<Circulo>();
 
     public ArrayList<Circulo> getListaCirculos() {
         return listaCirculos;
@@ -19,6 +19,7 @@ public class GestorCirculo {
     public void addCirculo(Circulo circulo) {
         this.listaCirculos.add(circulo);
     }
+    
     public int cantidad(){
         return this.listaCirculos.size();
     }
