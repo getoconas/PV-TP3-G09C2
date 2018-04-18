@@ -1,6 +1,8 @@
-package punto8;
+package punto8.test;
 
 import java.util.Scanner;
+import punto8.util.Inventario;
+import punto8.dominio.Libro;
 
 /**/
 

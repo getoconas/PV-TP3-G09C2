@@ -1,5 +1,6 @@
-package punto9;
+package punto9.util;
 
+import punto9.dominio.Libro;
 import java.util.ArrayList;
 
 /**/
@@ -11,10 +12,12 @@ public class Inventario {
         libro = new ArrayList<Libro>();
     }
     
+    //Metodo para agregar un libro de objeto Libro en el arraylist
     public void agregarLibro(Libro libros) {
         libro.add(libros);
     }
     
+    //Metodo para mostrar libros
     public void mostrarLibro() {
         System.out.println("*** LIBROS ***");
         for (int i = 0; i < libro.size(); i++) {
@@ -29,6 +32,7 @@ public class Inventario {
         }
     }
     
+    //Metodo para buscar un libro por el nombre del titulo
     public void buscarLibro(String nombre) {
         boolean encontrado = false;
         for (int i = 0; i < libro.size(); i++) {

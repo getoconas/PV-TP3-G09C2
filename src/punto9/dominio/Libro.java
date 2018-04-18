@@ -1,4 +1,4 @@
-package punto9;
+package punto9.dominio;
 
 /**/
 

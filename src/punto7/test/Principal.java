@@ -1,6 +1,8 @@
-package punto7;
+package punto7.test;
 
 import java.util.Scanner;
+import punto7.dominio.Auto;
+import punto7.util.Inventario;
 
 /**/
 

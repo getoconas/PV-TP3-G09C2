@@ -1,5 +1,6 @@
-package punto7;
+package punto7.util;
 
+import punto7.dominio.Auto;
 import java.util.Scanner;
 
 /**/
@@ -9,6 +10,7 @@ public class Inventario {
         
     }
     
+    //Metodo para mostrar los autos guardados en el arreglo
     public void mostrarAuto(Auto[] autos) {
         for (int i = 0; i < autos.length; i++) {
             System.out.println("----- INFORMACIÓN DEL AUTO -----");
@@ -21,6 +23,7 @@ public class Inventario {
         }
     }
     
+    //Metodo para modificar un auto
     public void modificarAuto(Auto[] autos) {
         Scanner scanner = new Scanner(System.in);
         String patente, marca, modelo, color, tipo;
