@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package punto3.principal;
+package punto3.test;
 
 import java.util.Scanner;
 import punto3.dominio.triangulo;
