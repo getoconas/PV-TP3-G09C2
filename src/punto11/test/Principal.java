@@ -1,6 +1,8 @@
-package punto11;
+package punto11.test;
 
+import punto11.dominio.Zapatilla;
 import java.util.Scanner;
+import punto11.util.Inventario;
 
 /**/
 

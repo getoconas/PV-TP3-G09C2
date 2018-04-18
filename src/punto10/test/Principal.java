@@ -1,6 +1,7 @@
-package punto10;
+package punto10.test;
 
 import java.util.Scanner;
+import punto10.util.Producto;
 
 /**/
 

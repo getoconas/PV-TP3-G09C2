@@ -1,5 +1,6 @@
-package punto10;
+package punto10.util;
 
+import punto10.dominio.Cuota;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -45,6 +46,7 @@ public class Producto {
         this.precio = precio;
     }
     
+    //Método para cargar elementos del tipo Cuota en el arreglo
     public void ingresarCuotas(double precio) {
         double porcentaje, total;
         cuotas[0] = new Cuota(1, precio);
@@ -77,22 +79,40 @@ public class Producto {
         cuotas[9] = new Cuota(24, total);
     }
     
+    //Método para mostrar los numeros de cuotas y la cantidad
     public void mostrarCuotas() {
         DecimalFormat df = new DecimalFormat("#.00");
-        System.out.println("--------- Información de Cuotas ---------");
-        System.out.println("Codigo: " + getCodigo() + " - Producto: " + getNombre());
+        System.out.println("---------------------------------------------------");
+        System.out.println("   Información del Producto");
+        System.out.println("   Codigo: " + getCodigo() + " - Producto: " + getNombre());
+        System.out.println("");
+        System.out.println("   Información de Cuotas");
+        System.out.println("   Cantidad de Cuotas \t A pagar \t");
         for (Cuota cuota : cuotas) {
-            System.out.println("Cant. de Cuotas " + cuota.getNumeroCuota() + 
-                    " - Total a pagar: " + df.format(cuota.getPrecioCuota()));
+            System.out.println("\t" + cuota.getNumeroCuota() + " \t\t" + df.format(cuota.getPrecioCuota()));
         }
-        System.out.println("-----------------------------------------");
+        System.out.println("---------------------------------------------------");
     }
     
+    //Metodo para seleccionar cuotas, por defecto vienen en 1, 2, 3, 4, 5, 6, 9, 12, 18 y 24 cuotas
     public void seleccionarCuotas() {
+        boolean salir = false;
+        int cantidad = 0;
         Scanner scanner = new Scanner(System.in);
         DecimalFormat df = new DecimalFormat("#.00");
         System.out.println("Seleccione la cantidad de cuotas");
-        int cantidad = scanner.nextInt();
+        do {
+            cantidad = scanner.nextInt();
+            for (int i = 0; i < cuotas.length; i++) {
+                if (cantidad == cuotas[i].getNumeroCuota()) {
+                    salir = true;
+                }
+            }
+            if (!salir) {
+                System.out.println("Ingrese una cantidad de cuotas correcta");
+            }
+        } while (salir == false);
+        
         switch (cantidad) {
             case 1:
                 System.out.println("El importe total a pagar es de: " + df.format(cuotas[0].getPrecioCuota()));
